@@ -1,0 +1,184 @@
+.body {
+    box-sizing: border-box;
+}
+
+.Contact-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.Contact-mission-statement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 3rem;
+    text-align: center;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+.Contact-mission-statement h1 {
+    font-weight: 1000;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.Contact-mission-statement p {
+    font-size: 20px;
+    line-height: 1.8rem;
+    color: #4b5157;
+}
+
+.Contact-us {
+    border-top: 1px solid #c8cacc;
+    padding-top: 3rem;
+}
+
+.contact-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-head h1 {
+    font-weight: 1000;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.Contact-number-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contacts {
+    line-height: 2.5rem;
+}
+.contacts p {
+    font-size: 20px;
+}
+
+.contacts p span {
+    font-weight: 600;
+}
+
+.Contact-forms {
+    line-height: 1.5rem;
+}
+.Contact-forms p {
+    font-size: 20px;
+}
+
+.Contact-forms input {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border: 3px solid #dfe2e6;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Nunito',sans-serif;
+    outline: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.Contact-forms input:hover {
+    border: 3px solid oklch(51.1% .262 276.966);;
+}
+.message-input {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.message-input button {
+    border: none;
+    background-color: oklch(51.1% .262 276.966);
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    transition: all 0.2s ease;
+}
+
+.message-input button:hover {
+    background: #7848e0;
+}
+
+@media (max-width: 1024px) {
+    .Contact-container {
+        width: 95%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .Contact-container {
+        width: 95%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width) {
+    .Contact-container{
+        width: 98%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .Contact-mission-statement {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .Contact-mission-statement h1 {
+        font-size: 2rem;
+    }
+
+    .Contact-mission-statement p {
+        font-size: 18px;
+    }
+
+    .contact-head h1 {
+        font-size: 2rem;
+    }
+
+    .Contact-number-form {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contacts,
+    .Contact-forms p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .Contact-mission-statement h1,
+    .contact-head h1 {
+        font-size: 1.8rem;
+    }
+
+    .Contact-mission-statement p,
+    .contacts p,
+    .Contact-forms p {
+        font-size: 16px;
+    }
+
+    .contacts {
+        line-height: 2rem;
+    }
+
+    .message-input button {
+        font-size: 18px;
+    }
+}

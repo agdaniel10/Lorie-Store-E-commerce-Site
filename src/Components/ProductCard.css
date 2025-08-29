@@ -1,0 +1,26 @@
+.add-to-cart {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.add-to-cart:hover {
+    background-color: #042a66;
+    transform: scale(1.04);
+}
+
+@media screen and (max-width: 375px) {
+    .add-to-cart {
+        font-size: 16px;
+    }
+}

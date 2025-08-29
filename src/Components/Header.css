@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+Header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+}
+
+/* ---General DIV of header */
+.Header_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #edece8;
+    max-width: 100%;
+    height: 4rem;
+    background-color: transparent;
+}
+
+/* Image and Heading Div */
+.img-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    flex-shrink: 1;
+}
+
+.img-title-container img {
+    width: 7vh;
+    height: 3rem;
+}
+
+.img-title-container h3 {
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-family: 'Prata', sans-serif;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* -----Page and linkes to other pages */
+.Header-pages ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 1;
+}
+
+.Header-pages ul li {
+  list-style: none;
+}
+
+.Header-pages ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  cursor: pointer;
+  border-bottom: 0.2rem solid transparent;
+  transition: all 0.3s ease;
+}
+
+.Header-pages ul li a.active {
+  border-bottom: 2px solid black;
+}
+
+.Header-pages ul li a:hover {
+  border-bottom: 2px solid black;
+  transform: scale(1.1);
+}
+
+.list-icons ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.list-icons ul li {
+    list-style: none;
+    cursor: pointer;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    transition: transform 0.2s ease;
+}
+
+.list-icons ul li:hover {
+    transform: scale(1.2);
+}
+
+.list-icons ul button {
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #edece8;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 505;
+    padding: 8px 8px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.list-icons ul button:hover{
+    transform: scale(1.1);
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+.hamburger-items {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100vh;
+    background: white;
+    padding: 50px;
+    padding-top: 5rem;
+    border-right: 1px solid #edece8;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1100;
+}
+
+.hamburger-items.open {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.xmark {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.4rem;
+}
+
+.hamburger-items h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    text-align: left;
+}
+
+.hamburger-items ul {
+    list-style: none;
+    margin-top: 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hamburger-items ul li {
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.hamburger-items ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.4rem;
+    display: block;
+    margin: 1rem 0;
+    transition: transform 0.3s ease;
+}
+
+.hamburger-items ul li a:hover {
+    transform: scale(1.05);
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .img-title-container, .Header-pages {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+
+    .hamburger-items {
+        display: block;
+    }
+}
+
+@media (min-width: 701px) {
+    .hamburger-items,
+    .hamburger-items.open {
+        display: none !important;
+    }
+
+    .img-title-container, .Header-pages {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+}

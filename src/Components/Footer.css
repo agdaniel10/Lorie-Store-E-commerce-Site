@@ -1,0 +1,225 @@
+/* src/Components/Footer.css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+.footer-container {
+  font-family: 'Prata', sans-serif;
+  border-top: 2px solid #e6edf2;
+  margin-top: 3rem;
+  background-color: #f8f8f8;
+  padding-bottom: 1rem;
+}
+
+.contact-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.contact {
+  background-color: #dde5eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 8px;
+  line-height: 1.7rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  min-height: 48px;
+}
+
+.contact:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blue {
+  color: #7e8c96;
+}
+
+.footer-categories-list {
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.first-footer-div {
+  line-height: 1.7rem;
+}
+
+.foot-head-container {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.foot-head-container img {
+  width: 7vh;
+  height: 3rem;
+}
+
+.foot-head-container h3 {
+  font-weight: 500;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.resume-icons {
+  display: flex;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.github-class i,
+.linkedin i,
+.twitter i {
+  transition: all 0.2s ease;
+}
+
+.github-class:hover i,
+.linkedin:hover i,
+.twitter:hover i {
+  transform: scale(1.1);
+  color: #0066cc;
+}
+
+.second-footer-div,
+.third-footer-div {
+  line-height: 1.8rem;
+}
+
+.second-footer-div ul li,
+.third-footer-div ul li {
+  list-style: none;
+  line-height: 1.7rem;
+  transition: all 0.2s ease;
+}
+
+.third-footer-div ul li a {
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    line-height: 1.7rem;
+    transition: all 0.2s ease;
+}
+
+.second-footer-div ul li:hover,
+.third-footer-div ul li:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.fourth-footer-div {
+  line-height: 1.7rem;
+}
+
+.news-letter {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-letter input {
+  border: 2px solid #e6edf2;
+  padding: 0.75rem;
+  font-family: 'Prata', sans-serif;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-bottom: 3px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.news-letter input:hover {
+  border: 2px solid #b2b5b8;
+}
+
+.news-letter input:focus {
+  border: 2px solid #8c8e8f;
+  box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.1);
+}
+
+.news-letter input::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+.news-letter button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-family: 'Prata', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.news-letter button:hover {
+  background: #282829;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.news-letter button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.news-letter button:focus {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
+}
+
+.news-letter button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.rights {
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  border-top: 1px solid #e6edf2;
+}
+
+.rights p {
+  margin: 0;
+  font-family: 'Prata', sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.rights span {
+  font-weight: 600;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .rights {
+    padding: 1rem 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .rights p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-letter input,
+  .news-letter button {
+    padding: 0.875rem;
+    font-size: 16px;
+  }
+}

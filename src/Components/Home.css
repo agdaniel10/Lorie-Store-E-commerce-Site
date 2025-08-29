@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* ----likes search etc */
+
+section {
+    margin-top: 0;
+}
+
+.SectionContainer {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.SectionContainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* .MainSectionContainer {
+    border-bottom: 1px solid #edece8;
+} */
+
+.MainSection {
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* --------- Cartegories buttons----- */
+
+.cartegories-btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.Single-btns {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+
+.Single-btns button,
+.seeall-btn button {
+    border: none;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.Single-btns button:hover,
+.seeall-btn button:hover {
+    background-color: #042a66;
+}
+
+
+/* -------- Items cards display -------- */
+
+.Cards-Container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #edece8;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    margin: 1rem;
+    line-height: 1.7rem;
+}
+
+.card-image-div {
+    background-color:#fcfdff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-image-div i {
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.card-image-div button {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    font-size: large;
+}
+
+.card-image-div i:hover{
+    transform: scale(1.04);
+}
+
+.card-image-div img {
+    width: 70%;
+    height: 320px;
+}
+
+.Card-description {
+    /* background-color: red; */
+    margin: 1rem;
+}
+
+.mens-clothing {
+    font-size: 0.8rem;
+    color: #cacfd9;
+}
+
+.item-description {
+    font-size: 0.9rem;
+}
+
+.price {
+    font-size: 0.8rem;
+    color: #2b323d;
+}
+.card-stars {
+    display: flex;
+}
+
+.review, .stock {
+    color: #cacfd9;
+}
+
+.stock span {
+    color: #08a61d;
+}
+
+.discount {
+    color: #08a61d;
+    font-size: 0.9rem;
+}
+
+.discount span {
+    text-decoration: line-through;
+    color: #cacfd9;
+}
+
+/* ------------Popular Categories section ------- */
+
+.Popular-Categories-Section {
+    border: 1px solid #edece8;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.second-popular-categories {
+    margin: 2rem;
+}
+
+.second-popular-categories h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.popular-items {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 24px;
+}
+
+.popular-single-items {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    min-height: 90px;
+}
+
+.popular-single-items:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background-color: #f8f9fa;
+}
+
+
+.popular-single-items img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.cartory-info {
+    flex: 1;
+}
+
+.category-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.category-count {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.category-count.no-items {
+    color: #e74c3c;
+}
+
+/* Media Queries for extra control */
+@media (max-width: 768px) {
+    .second-shop-by-brand {
+        margin: 1rem;
+    }
+    
+    .brand-general-div {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        padding: 1rem;
+    }
+    
+    .logistics {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-general-div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.shop-by-brand {
+    border: 1px solid #edece8;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 3rem auto;
+}
+
+.second-shop-by-brand {
+    margin: 2.5rem;
+}
+
+.shop-view {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop-view p {
+    font-size: 1.5rem;
+}
+
+.shop-view button {
+    font-family: 'Nunito',sans-serif;
+    border: 1px solid #edece8;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: white;
+    padding: 4px 8px;
+    border-radius: 15px;
+    transform: all 0.4s ease;
+}
+
+.shop-view button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.brand-general-div-wrapper {
+    margin-top: 2rem;
+    padding: 1px;
+    background-color:#f0f3f5;
+}
+
+.brand-general-div {
+    background-color:#f0f3f5;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    margin: 2.5rem 0;
+    padding: 1rem 0;
+}
+
+.brand-image {
+    height: 100px;
+    width: 90%;
+    transition: tranform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    margin: 1rem auto;
+    overflow: hidden;
+    gap: .5rem;
+}
+
+.brand-image:hover {
+    transform: scale(1.04);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.brand-image img {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    padding: .6rem;
+    transition: all 0.3s ease;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+}
+
+.brand-image img:hover {
+    transform: scale(1.09);
+}
+
+
+.logistics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.logistics-element {
+    background-color: #f0f3f5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    border-radius: 8px;
+}
+
+.logistics-element img {
+    width: clamp(40px, 6vw, 50px);
+    height: auto;
+}
+
+.logistics-info p {
+    margin: 0.25rem 0;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.bold {
+    font-weight: 510;
+}
+
+/* ----------------- blog container--------- */
+
+.latest-view {
+    max-width: 1300px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem auto;
+}
+
+.latest-view h3 {
+    font-size: 1.7rem;
+}
+
+.latest-view button {
+    border: 1px solid #f0f3f5;
+    background-color: white;
+    padding: 6px 16px;
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.latest-view button:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 495px) {
+    .latest-view {
+        width: 90%;
+    }
+
+    .latest-view h3 {
+        font-size: 1.3rem;
+    }
+
+    .latest-view button {
+        padding: 4px 16px;
+    }
+}
+
+
+.Blog-container {
+    background-color: #f0f3f5;
+    max-width: 1300px;
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card-blog {
+    width: 240px;
+    min-width: 240px;
+    max-width: 240px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #e5ece8;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    gap: 1rem;
+    line-height: 1.7rem;
+    transition: all 0.2s ease-in;
+}
+
+.card-blog:hover {
+    transform: scale(1.05);
+}
+.card-space {
+    padding: 1rem;
+}
+
+
+.card-space img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.lifestyle {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* -------Footer section --------- */
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+        gap: 0.75rem;
+        grid-template-columns: 1fr;
+    }
+    
+    .contact {
+        padding: 16px 12px;
+        gap: 12px;
+        font-size: 0.95rem; 
+    }
+    
+    .contact:hover {
+        transform: scale(1.02);
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        margin: 0.75rem auto;
+        padding: 0 0.25rem;
+    }
+    
+    .contact {
+        padding: 14px 10px;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+}
+
+/* Large screen adjustments */
+@media (min-width: 1400px) {
+    .contact-container {
+        gap: 1.5rem;
+    }
+    
+    .contact {
+        padding: 16px 12px;
+    }
+}
+
+
+/* Responsive breakpoints */
+@media (max-width: 1340px) {
+    .Blog-container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .Blog-container {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        margin: 1rem;
+        gap: 1rem;
+    }
+    
+    .card-blog {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .card-space {
+        padding: 1rem;
+    }
+    
+    .card-space img {
+        height: 160px;
+    }
+    .card-blog {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .Blog-container {
+        padding: 1rem;
+        margin: 0.5rem;
+        border-radius: 8px;
+    }
+    
+    .card-space {
+        padding: 0.8rem;
+    }
+    
+    .card-space img {
+        height: 140px;
+    }
+
+    .card-blog {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .lifestyle {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .card-space > p:last-child {
+        font-size: 1rem;
+    }
+}
+
+/* For very large screens */
+@media (min-width: 1400px) {
+    .Blog-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .Popular-Categories-Section {
+        width: 95%;
+    }
+    
+    .popular-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .Popular-Categories-Section {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .second-popular-categories {
+        padding: 1.5rem;
+    }
+
+    .second-popular-categories h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .popular-items {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 1.5rem;
+    }
+
+    .popular-single-items {
+        padding: 16px;
+        min-height: 80px;
+    }
+
+    .popular-single-items img {
+        width: 60px;
+        height: 60px;
+        margin-right: 12px;
+    }
+
+    .popular-single-items h4 {
+        font-size: 16px;
+    }
+
+    .popular-single-items p {
+        font-size: 13px;
+    }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+    .Popular-Categories-Section {
+        width: 98%;
+    }
+
+    .second-popular-categories {
+        padding: 1rem;
+    }
+
+    .second-popular-categories h3 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .popular-items {
+        gap: 12px;
+        margin-top: 1rem;
+    }
+
+    .popular-single-items {
+        padding: 12px;
+        min-height: 70px;
+    }
+
+    .popular-single-items img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .popular-single-items h4 {
+        font-size: 15px;
+    }
+
+    .popular-single-items p {
+        font-size: 12px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .cartegories-btns {
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .Single-btns {
+        justify-content: center; 
+        width: 100%;
+    }
+    .seeall-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

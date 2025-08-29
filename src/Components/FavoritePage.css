@@ -1,0 +1,88 @@
+body {
+    display: grid;
+    height: 100vh;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+thead {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+td {
+    padding: 1rem 2rem;
+}
+
+td:first-child {
+    padding-left: 1rem;
+}
+
+.first-column {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.first-column button {
+    border: none;
+    font-size: larger;
+    background-color: transparent;
+}
+
+.status {
+    display: inline-flex;
+    border-radius: 10px;
+    padding: 0.4rem 1rem;
+    background-color: #b1e3b5;
+    color: #156b1d;
+}
+
+.first-column img {
+    width: 100px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+.product-btn {
+    width: 250px;
+}
+
+.reset-btn {
+    margin-left: 5rem;
+}
+
+.reset-btn button {
+    padding: 0.7rem 1.5rem;
+    background-color: #b3090f;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+}
