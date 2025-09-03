@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import headerImage from './Images/react_header-image.jpeg';
 import { useNavigate } from 'react-router-dom';
-import CartPage from './CartPage';
 import './Header.css';
+import { FavoriteContext } from './FavoriteContext';
+import { CartContext } from './CartContext';
 
 function Header() {
   const [click, setClick] = useState(false);
+  const { favoriteCount } = useContext(FavoriteContext)
+  const { cartCount } = useContext(CartContext)
 
   const handleClick = () => setClick(!click);
 
@@ -67,9 +70,22 @@ function Header() {
           <ul>
             <li><i className="fa-solid fa-sun"></i></li>
             <li><i className="fa-solid fa-magnifying-glass"></i></li>
-            {/* <li><i className="fa-solid fa-heart"></i></li> */}
-            <li><button onClick={() => navigate("/FavoritePage")}><i className="fa-solid fa-heart"></i></button></li>
-            <li><button onClick={() => navigate("/CartPage")}><i className="fa-solid fa-cart-shopping"></i></button></li>
+            <li>
+              <div className='cart-container'>
+                <span className='cart-icon' onClick={() => navigate("/CartPage")}>
+                  <i className="fa-solid fa-cart-shopping"></i>
+                </span>
+                <span className="cart-count">{cartCount}</span>
+              </div>
+            </li>
+            <li>
+              <div className="fave-container">
+                <span className="fave-icon" onClick={() => navigate("/FavoritePage")} >
+                  <i className="fa-solid fa-heart"></i>
+                </span>
+                <span className="fave-count">{favoriteCount}</span>
+              </div>
+            </li>
             <button>Login</button>
           </ul>
         </div>

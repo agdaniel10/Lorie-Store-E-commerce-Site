@@ -1,4 +1,5 @@
-.body {
+/* Apply box-sizing to all elements */
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -6,6 +7,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 4rem auto;
+    padding: 0 1rem; /* Add padding for mobile */
 }
 
 .Contact-mission-statement {
@@ -58,6 +60,7 @@
 .contacts {
     line-height: 2.5rem;
 }
+
 .contacts p {
     font-size: 20px;
 }
@@ -69,6 +72,7 @@
 .Contact-forms {
     line-height: 1.5rem;
 }
+
 .Contact-forms p {
     font-size: 20px;
 }
@@ -79,15 +83,17 @@
     border: 3px solid #dfe2e6;
     border-radius: 10px;
     padding: 15px;
-    font-family: 'Nunito',sans-serif;
+    font-family: 'Nunito', sans-serif;
     outline: none;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease;
+    box-sizing: border-box; /* Ensure padding doesn't break width */
 }
 
 .Contact-forms input:hover {
-    border: 3px solid oklch(51.1% .262 276.966);;
+    border: 3px solid oklch(51.1% .262 276.966);
 }
+
 .message-input {
     display: flex;
     flex-direction: column;
@@ -110,28 +116,21 @@
     background: #7848e0;
 }
 
+/* Tablet styles */
 @media (max-width: 1024px) {
     .Contact-container {
         width: 95%;
-        margin: 10px auto;
+        margin: 2rem auto;
     }
 }
 
+/* Mobile styles - Combined and improved */
 @media (max-width: 768px) {
     .Contact-container {
         width: 95%;
-        margin: 10px auto;
+        margin: 1rem auto;
+        padding: 0 0.5rem;
     }
-}
-
-@media (max-width) {
-    .Contact-container{
-        width: 98%;
-    }
-}
-
-
-@media (max-width: 768px) {
 
     .Contact-mission-statement {
         padding-bottom: 2rem;
@@ -155,13 +154,22 @@
         gap: 2rem;
     }
 
-    .contacts,
+    .contacts p,
     .Contact-forms p {
         font-size: 16px;
     }
+
+    .Contact-forms input {
+        padding: 12px;
+    }
 }
 
-@media (max-width: 450px) {
+/* Small mobile styles */
+@media (max-width: 480px) {
+    .Contact-container {
+        width: 98%;
+        padding: 0 0.25rem;
+    }
 
     .Contact-mission-statement h1,
     .contact-head h1 {
@@ -180,5 +188,29 @@
 
     .message-input button {
         font-size: 18px;
+    }
+
+    .Contact-forms input {
+        padding: 10px;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 375px) {
+    .Contact-container {
+        margin: 0.5rem auto;
+    }
+
+    .cart-list-name-price p {
+        font-size: 10px;
+    }
+
+    .Contact-mission-statement h1,
+    .contact-head h1 {
+        font-size: 1.6rem;
+    }
+
+    .Contact-number-form {
+        gap: 1.5rem;
     }
 }

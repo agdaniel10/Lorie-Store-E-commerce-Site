@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import ProductButton from './ProductButton';
 import { FavoriteContext } from './FavoriteContext';
 
-
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
   const { favoriteItems, toggleFavorite} = useContext(FavoriteContext)
@@ -14,7 +13,10 @@ const ProductCard = ({ product }) => {
   }
 
   const handleCardClick = (e) => {
-    navigate(`/product/${product.id}`);
+    // Only navigate if the click didn't come from interactive elements
+    if (!e.target.closest('button') && !e.target.closest('.product-button-container')) {
+      navigate(`/product/${product.id}`);
+    }
   };
 
   const handleFavoriteClick = (e) => {
@@ -38,14 +40,6 @@ const ProductCard = ({ product }) => {
       className="card" 
       onClick={handleCardClick} 
       style={{ cursor: 'pointer' }}
-      role="button"
-      tabIndex={0}
-      aria-label={`View details for ${product.name}`}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          handleCardClick();
-        }
-      }}
     >
       <div className="card-image-div">
         <i className="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
@@ -58,7 +52,10 @@ const ProductCard = ({ product }) => {
         />
         <div className='heart-div'>
           <button onClick={handleFavoriteClick}> 
-            {favoriteItems.find((item) => item.id === product.id) ? <i class="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart" aria-hidden="true"></i>}
+            {favoriteItems.find((item) => item.id === product.id) ? 
+              <i className="fa-solid fa-heart"></i> : 
+              <i className="fa-regular fa-heart" aria-hidden="true"></i>
+            }
           </button>
         </div>
       </div>
@@ -90,7 +87,11 @@ const ProductCard = ({ product }) => {
             ({Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}% off)
           </p>
         )}
-        <ProductButton product={product} />
+        
+        {/* Wrap ProductButton in a container to prevent click conflicts */}
+        <div className="product-button-container">
+          <ProductButton product={product} />
+        </div>
       </div>
     </div>
   );

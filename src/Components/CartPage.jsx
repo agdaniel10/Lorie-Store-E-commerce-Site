@@ -61,9 +61,10 @@ function CartPage() {
 
                                             <div className="cart-list-properties">
                                                 <div className="cart-list-name-price">
-                                                    <p>{item.name}</p>
+                                                    <p className="item-name-paragraph">{item.name}</p>
                                                     <p>{formatPrice(item.price, item.quantity)}</p>
                                                 </div>
+                                                
 
                                                 <p className="cart-var">
                                                     Variant: <span>
@@ -78,15 +79,15 @@ function CartPage() {
                                                 <div className="cart-list-bottom-items">
                                                     <div className="cart-list-bottom-items-left">
                                                         <button className="btn-love-item" onClick={() => toggleFavorite(item)}> 
-                                                            {favoriteItems.find((item1) => item1.id === item.id) ? <i class="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart" aria-hidden="true"></i>}
+                                                            {favoriteItems.find((item1) => item1.id === item.id) ? <i className="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart" aria-hidden="true"></i>}
                                                         </button>
-                                                        <button className="btn-remove" onClick={() => removeFromCart(item.id)}><i class="fa-solid fa-trash"></i></button>
+                                                        <button className="btn-remove" onClick={() => removeFromCart(item.id)}><i className="fa-solid fa-trash"></i></button>
                                                     </div>
 
                                                     <div className="cart-list-bottom-items-right">
-                                                        <button onClick={() => reduceQuantity(item.id)}><i class="fa-solid fa-minus"></i></button>
+                                                        <button onClick={() => reduceQuantity(item.id)}><i className="fa-solid fa-minus"></i></button>
                                                         <p>{item.quantity}</p>
-                                                        <button onClick={() => addQuantity(item.id)}><i class="fa-solid fa-plus"></i></button>
+                                                        <button onClick={() => addQuantity(item.id)}><i className="fa-solid fa-plus"></i></button>
                                                     </div>
                                                 </div>
                                             </div>

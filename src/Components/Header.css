@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-width: 0;
 }
 
 body {
@@ -29,6 +30,13 @@ Header {
     height: 4rem;
     background-color: transparent;
 }
+
+
+.Header_container > * {
+  flex: 1 1 auto;   /* allow grow & shrink */
+  min-width: 0;     /* prevent overflow */
+}
+
 
 /* Image and Heading Div */
 .img-title-container {
@@ -122,6 +130,33 @@ Header {
 
 .list-icons ul button:hover{
     transform: scale(1.1);
+}
+
+.fave-container, .cart-container {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.fave-icon, .cart-icon {
+    display: inline-block;
+}
+
+.fave-count, .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
 }
 
 .menu-icon {

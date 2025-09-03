@@ -205,7 +205,55 @@
   color: #333;
 }
 
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+  .contact-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+    padding: 0 0.75rem;
+  }
+  
+  .footer-categories-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+    padding: 0 0.75rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .footer-container {
+    margin-top: 2rem;
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin: 0.75rem auto;
+  }
+  
+  .contact {
+    padding: 8px 12px;
+    gap: 10px;
+    min-height: 44px;
+    font-size: 14px;
+  }
+  
+  .footer-categories-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem auto;
+  }
+  
+  .foot-head-container img {
+    width: 5vh;
+    height: 2.5rem;
+  }
+  
+  .resume-icons {
+    gap: 1.5rem;
+    justify-content: flex-start;
+  }
+  
   .rights {
     padding: 1rem 0.5rem;
     margin-top: 1.5rem;
@@ -216,10 +264,116 @@
   }
 }
 
+@media (max-width: 600px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .footer-categories-list {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 12px;
+  }
+}
+
 @media (max-width: 480px) {
+  .footer-container {
+    margin-top: 1.5rem;
+  }
+  
+  .contact-container {
+    padding: 0 0.5rem;
+    margin: 0.5rem auto;
+  }
+  
+  .contact {
+    padding: 10px;
+    gap: 8px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+  
+  .footer-categories-list {
+    padding: 0 0.5rem;
+    margin: 1rem auto;
+    gap: 1.5rem;
+  }
+  
+  .foot-head-container {
+    gap: 0.2rem;
+  }
+  
+  .foot-head-container img {
+    width: 4vh;
+    height: 2rem;
+  }
+  
+  .resume-icons {
+    gap: 1rem;
+    padding-top: 0.75rem;
+  }
+  
+  .second-footer-div ul li,
+  .third-footer-div ul li {
+    font-size: 14px;
+    line-height: 1.5rem;
+  }
+  
   .news-letter input,
   .news-letter button {
     padding: 0.875rem;
     font-size: 16px;
+  }
+  
+  .news-letter input {
+    border-radius: 8px;
+  }
+  
+  .news-letter button {
+    border-radius: 8px;
+  }
+  
+  .rights {
+    padding: 0.75rem 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .rights p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact {
+    padding: 8px;
+    gap: 6px;
+    font-size: 12px;
+  }
+  
+  .foot-head-container h3 {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+  }
+  
+  .resume-icons {
+    gap: 0.75rem;
+  }
+  
+  .second-footer-div ul li,
+  .third-footer-div ul li {
+    font-size: 13px;
+  }
+  
+  .news-letter input,
+  .news-letter button {
+    padding: 0.75rem;
+    font-size: 15px;
   }
 }

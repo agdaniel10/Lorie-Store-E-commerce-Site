@@ -14,6 +14,8 @@ export function FavoriteProvider({ children }) {
         }
     })
 
+    const favoriteCount = favoriteItems.length;
+
     useEffect(() => {
         localStorage.setItem('favorite', JSON.stringify(favoriteItems))
     }, [favoriteItems])
@@ -55,6 +57,7 @@ export function FavoriteProvider({ children }) {
     return (
         <FavoriteContext.Provider value={{ 
             favoriteItems, 
+            favoriteCount,
             toggleFavorite, 
             addToFavorite, 
             removeFromFavorite, 

@@ -1,0 +1,41 @@
+.empty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2rem;
+    margin: 17rem auto;
+
+    animation-name: slideInLeft;
+    animation-duration: 2s;
+}
+
+.empty-container img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.empty-container p {
+    color: #8b8e94;
+}
+
+.empty-container button {
+    margin-top: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    padding: 10px 16px;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-300px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

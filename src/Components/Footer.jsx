@@ -97,7 +97,7 @@ function Footer() {
       </div>
 
       <div className="rights">
-        <p>© 2025 <span>Cartella</span>. All Rights Reserved.</p>
+        <p>© 2025 <span>Lorie</span>. All Rights Reserved.</p>
       </div>
     </footer>
   );

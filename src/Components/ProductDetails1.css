@@ -75,11 +75,6 @@
     transition: all 0.2s ease;
 }
 
-.add-to-cart1:hover {
-    transform: scale(1.05);
-    background: #202420;
-}
-
 .heart {
     width: 50px;
     height: 50px;
@@ -87,6 +82,7 @@
     background: transparent;
     border-radius: 10px;
     flex-shrink: 0;
+    font-size: larger;
 }
 
 .xtics {
@@ -190,7 +186,7 @@
     
     .btn-love-xtics {
         display: flex;
-        /* flex-direction: column; */
+        flex-direction: column;
         gap: 10px;
     }
     
