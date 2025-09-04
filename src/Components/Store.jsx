@@ -89,10 +89,12 @@ const Store = () => {
           )}
         </div>
 
-        <div className="products-section">
-          {filteredProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+        <div className="product-section-container">
+          <div className='product-section'>
+            {filteredProducts.map(product => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
         </div>
 
       </div>

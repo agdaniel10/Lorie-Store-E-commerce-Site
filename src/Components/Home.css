@@ -83,14 +83,34 @@ section {
 }
 
 .card {
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     background-color: white;
     border-radius: 10px;
     border: 1px solid #edece8;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    margin: 1rem;
+    /* margin: 1rem; */
     line-height: 1.7rem;
+
+
+    animation-name: slidefromright;
+    animation-duration: 2s;
+}
+
+.card,
+.card:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes slidefromright {
+    from {
+        transform: translateY(300px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 .card-image-div {
@@ -428,33 +448,31 @@ section {
     }
 }
 
-
 .Blog-container {
     background-color: #f0f3f5;
     max-width: 1300px;
     width: 100%;
     margin: 2rem auto;
     border-radius: 10px;
-    display: flex;
-    justify-content:flex-start;
-    flex-wrap: wrap;
-    gap: 1rem;
     padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 15px;
 }
 
+
 .card-blog {
-    width: 240px;
-    min-width: 240px;
-    max-width: 240px;
     background-color: white;
     border-radius: 10px;
     border: 1px solid #e5ece8;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    gap: 1rem;
-    line-height: 1.7rem;
-    transition: all 0.2s ease-in;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .card-blog:hover {
     transform: scale(1.05);
@@ -519,81 +537,6 @@ section {
     
     .contact {
         padding: 16px 12px;
-    }
-}
-
-
-/* Responsive breakpoints */
-@media (max-width: 1340px) {
-    .Blog-container {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .Blog-container {
-        grid-template-columns: 1fr;
-        padding: 1.5rem;
-        margin: 1rem;
-        gap: 1rem;
-    }
-    
-    .card-blog {
-        max-width: 100%;
-        width: 100%;
-    }
-    
-    .card-space {
-        padding: 1rem;
-    }
-    
-    .card-space img {
-        height: 160px;
-    }
-    .card-blog {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    
-    .Blog-container {
-        padding: 1rem;
-        margin: 0.5rem;
-        border-radius: 8px;
-    }
-    
-    .card-space {
-        padding: 0.8rem;
-    }
-    
-    .card-space img {
-        height: 140px;
-    }
-
-    .card-blog {
-        max-width: 100%;
-        width: 100%;
-    }
-    
-    .lifestyle {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-    
-    .card-space > p:last-child {
-        font-size: 1rem;
-    }
-}
-
-/* For very large screens */
-@media (min-width: 1400px) {
-    .Blog-container {
-        grid-template-columns: repeat(4, 1fr);
     }
 }
 

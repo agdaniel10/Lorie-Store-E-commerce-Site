@@ -24,10 +24,8 @@
 }
 
 .filter-button {
-    
     text-align: center;
     margin: 2rem auto;
-    
     font-family: 'Nunito', sans-serif;
     border-radius: 10px;
     padding: 6px 12px;
@@ -98,12 +96,21 @@ label {
     font-weight:600;
 }
 
-.products-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    flex: 1;
-    gap: 10px;
+
+.product-section-container {
+    max-width: 1200px;
+    width: 100%;
 }
+
+.product-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1em;
+    padding: 1rem;
+    margin: auto;
+}
+
 
 .filter-hambug {
     position: fixed;
@@ -142,11 +149,6 @@ label {
     .category-div {
         display: none;
     }
-    
-    .products-section {
-        margin: auto;
-        margin-right: 3rem;
-    }
 
     .filter-hambug {
         display: block;
@@ -170,11 +172,30 @@ label {
         font-size: 20px;
         text-align: center;
     }
+}
 
-    .products-section {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+    .product-section-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-section-container {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 0.75rem;
+        padding: 0.5rem;
         margin: auto;
+    }
+
+    .product-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
     }
 }
