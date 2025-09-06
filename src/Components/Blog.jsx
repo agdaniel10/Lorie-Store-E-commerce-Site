@@ -1,9 +1,16 @@
-import EmptyCartDisplay from "./EmptyCartDisplay";
+import "./Blog.css";
+import BlogCard from "./BlogCard.jsx";
+
 function Blog() {
 
     return (
-        <div>
-            <h1> We are coming to make things happen</h1>
+        <div className="blog-container">
+            <h1>Our blogs</h1>
+
+            <div className="blog-page-card-container">
+                <BlogCard /> 
+            </div>
+
         </div>
     )
 }

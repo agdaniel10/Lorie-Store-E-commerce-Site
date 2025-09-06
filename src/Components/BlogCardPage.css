@@ -1,0 +1,41 @@
+.blog-card-page-container {
+    max-width: 90%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-page-image {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.phone-image {
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.back-to-blog-btn {
+    max-width: 90%;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.back-to-blog-btn button {
+    background-color: transparent;
+    border: none;
+    font-size: larger;
+    font-family: 'Nunito',sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+    .back-to-blog-btn button {
+        font-size: large;
+    }
+}

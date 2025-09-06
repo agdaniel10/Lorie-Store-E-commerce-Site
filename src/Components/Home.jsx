@@ -27,6 +27,7 @@ import office from "./Images/office-1.webp"
 
 import { products, categories } from "./data/Products.jsx";
 import ProductCard from "./ProductCard";
+import BlogCard from "./BlogCard.jsx";
 
 
 function Home() {
@@ -215,65 +216,7 @@ function Home() {
                 </div>
 
                 <div className="Blog-container">
-                    <div className="card-blog">
-                        <div className="card-space">
-                            <img src={office} alt="" />
-                            <div className="lifestyle">
-                                <p>Lifestyle</p>
-                                <p><i class="fa-solid fa-calendar-week"></i> Feb 19, 2025</p>
-                            </div>
-
-                            <p>Office rental agency or direct? Which is best</p>
-                        </div>
-                    </div>
-
-                    <div className="card-blog">
-                        <div className="card-space">
-                            <img src={office} alt="" />
-                            <div className="lifestyle">
-                                <p>Lifestyle</p>
-                                <p><i class="fa-solid fa-calendar-week"></i> Feb 19, 2025</p>
-                            </div>
-
-                            <p>Office rental agency or direct? Which is best</p>
-                        </div>
-                    </div>
-
-                    <div className="card-blog">
-                        <div className="card-space">
-                            <img src={office} alt="" />
-                            <div className="lifestyle">
-                                <p>Lifestyle</p>
-                                <p><i class="fa-solid fa-calendar-week"></i> Feb 19, 2025</p>
-                            </div>
-
-                            <p>Office rental agency or direct? Which is best</p>
-                        </div>
-                    </div>
-
-                    <div className="card-blog">
-                        <div className="card-space">
-                            <img src={office} alt="" />
-                            <div className="lifestyle">
-                                <p>Lifestyle</p>
-                                <p><i class="fa-solid fa-calendar-week"></i> Feb 19, 2025</p>
-                            </div>
-                            <p>Office rental agency or direct? Which is best</p>
-                        </div>
-                    </div>
-
-                    <div className="card-blog">
-                        <div className="card-space">
-                            <img src={office} alt="" />
-                            <div className="lifestyle">
-                                <p>Lifestyle</p>
-                                <p><i class="fa-solid fa-calendar-week"></i> Feb 19, 2025</p>
-                            </div>
-                            <p>Office rental agency or direct? Which is best</p>
-                        </div>
-                    </div>
-
-                    
+                    <BlogCard />
                 </div>
             </section>
     </>

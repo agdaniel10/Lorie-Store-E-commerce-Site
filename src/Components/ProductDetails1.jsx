@@ -9,7 +9,6 @@ import { FavoriteContext } from "./FavoriteContext";
 
 const ProductDetails1 = () => {
     const { id } = useParams();
-    const navigate = useNavigate();
     const product = products.find(p => p.id === parseInt(id));
     const {favoriteItems, toggleFavorite, addToFavorite, removeFromFavorite} = useContext(FavoriteContext);
 

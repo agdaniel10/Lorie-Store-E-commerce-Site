@@ -13,6 +13,7 @@ import { FavoriteProvider } from './Components/FavoriteContext';
 import { Toaster } from 'react-hot-toast';
 import './App.css';
 import ProductDetails1 from './Components/ProductDetails1';
+import BlogCardPage from './Components/BlogCardPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/product/:id" element={<ProductDetails1 />} />
+              <Route path="/blogcard/:id" element={<BlogCardPage />} />
               <Route path="/CartPage" element={<CartPage />} />
               <Route path="/FavoritePage" element={<FavoritesPage />} />
               <Route path="/store" element={<Store />} />
