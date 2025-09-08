@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { products } from './data/Products';
 import "./Search.css"
 
-function Search({ isVisible, onClose }) { // Add onClose prop
+function Search({ isVisible, onClose }) {
     const [input, setInput] = useState('')
     const navigate = useNavigate()
 
@@ -23,7 +23,7 @@ function Search({ isVisible, onClose }) { // Add onClose prop
 
     const handleSearchedItemDetails = (page) => {
         navigate(`/product/${page.id}`)
-        onClose() // Fixed: was "onclose()" - JavaScript is case sensitive
+        onClose()
     }
 
     return (
@@ -36,7 +36,7 @@ function Search({ isVisible, onClose }) { // Add onClose prop
                     onChange={(e) => handleInputChange(e)}
                     className="search-input" 
                     placeholder="Search for products..." 
-                    autoFocus // Automatically focus when search opens
+                    autoFocus 
                 />
                 <button onClick={handleClearInput}>
                     <i className="fa-solid fa-x"></i>
@@ -46,9 +46,9 @@ function Search({ isVisible, onClose }) { // Add onClose prop
             {input && (
                 <div className="search-results">
                     {filteredProducts.length > 0 ? (
-                        filteredProducts.map((product) => ( // Removed index parameter since we're not using it properly
+                        filteredProducts.map((product) => ( 
                             <div 
-                                key={product.id} // Use product.id as key instead of index
+                                key={product.id} 
                                 className="filtered-product-general-div" 
                                 onClick={() => handleSearchedItemDetails(product)}
                                 style={{ cursor: 'pointer'}}
