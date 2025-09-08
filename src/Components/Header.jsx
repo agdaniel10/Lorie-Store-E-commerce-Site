@@ -5,18 +5,13 @@ import { useNavigate } from 'react-router-dom';
 import './Header.css';
 import { FavoriteContext } from './FavoriteContext';
 import { CartContext } from './CartContext';
-import Search from './Search';
 
-function Header() {
+function Header({ onSearchClick }) {
   const [click, setClick] = useState(false);
   const { favoriteCount } = useContext(FavoriteContext)
   const { cartCount } = useContext(CartContext)
 
   const handleClick = () => setClick(!click);
-
-  const showSearch = () => {
-    click ? <Search /> : ''
-  }
 
   const navigate = useNavigate();
 
@@ -73,7 +68,13 @@ function Header() {
 
         <div className="list-icons">
           <ul>
-            <li><i className="fa-solid fa-magnifying-glass" onClick={() => showSearch()}></i></li>
+            <li>
+              <i 
+                className="fa-solid fa-magnifying-glass" 
+                onClick={onSearchClick}
+                style={{ cursor: 'pointer' }}
+              />
+            </li>
             <li>
               <div className='cart-container'>
                 <span className='cart-icon' onClick={() => navigate("/CartPage")}>

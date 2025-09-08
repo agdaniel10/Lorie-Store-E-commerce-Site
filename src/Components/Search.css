@@ -4,8 +4,12 @@
     border: 1px solid #ced2d6;
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 2px 3px 14px #d3d7db;
-    z-index: 1000;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    z-index: 50;
+    background-color: white;
 }
 
 .search-delete-container {
@@ -50,16 +54,17 @@
 .filtered-image {
     max-width: 40px;
     width: 100%;
+    height: 70px;
     border: 1px solid #d3d7db;
     border-radius: 5px;
 }
 
 .filtered-image img {
     max-width: 40px;
+    height: 70px;
     width: 100%;
     border-radius: 5px;
-    height: auto;
-    object-fit: cover;
+    object-fit:inherit;
 }
 
 .filtered-product-general-div {
@@ -75,4 +80,15 @@
 
 .product-description {
     color: #424247;
+}
+
+@media screen and (max-width: 768px) {
+    .search-container {
+        max-width: 300px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-left: 3rem;
+    }
 }

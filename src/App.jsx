@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Home from './Components/Home';
@@ -14,13 +15,25 @@ import { Toaster } from 'react-hot-toast';
 import './App.css';
 import ProductDetails1 from './Components/ProductDetails1';
 import BlogCardPage from './Components/BlogCardPage';
+import Search from './Components/Search';
 
 function App() {
+  const [showSearch, setShowSearch] = useState(false)
+
+  const toggleSearch = () => {
+    setShowSearch(!showSearch)
+  }
+
+  const closeSearch = () => {
+    setShowSearch(false)
+  }
+
   return (
     <div>
       <CartProvider>
         <FavoriteProvider>
-          <Header />
+          <Header onSearchClick={toggleSearch} />
+          <Search isVisible={showSearch} onClose={closeSearch} />
           <main className="content">
             <Routes>
               <Route path="/" element={<Home />} />

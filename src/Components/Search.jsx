@@ -3,13 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { products } from './data/Products';
 import "./Search.css"
 
-
-function Search () {
-
+function Search({ isVisible, onClose }) { // Add onClose prop
     const [input, setInput] = useState('')
-    const [click, setClick] = useState(false)
-
     const navigate = useNavigate()
+
+    if (!isVisible) return null;
 
     const handleInputChange = (e) => {
         setInput(e.target.value);
@@ -20,62 +18,55 @@ function Search () {
     }
 
     const filteredProducts = products.filter((item) => 
-        item.name.toLowerCase().includes(input.toLocaleLowerCase())
+        item.name.toLowerCase().includes(input.toLowerCase())
     );
 
     const handleSearchedItemDetails = (page) => {
         navigate(`/product/${page.id}`)
+        onClose() // Fixed: was "onclose()" - JavaScript is case sensitive
     }
 
-    const handleClick = () => [
-        setClick(!click)
-    ]
-
-
     return (
-
         <div className="search-container">
 
-            <div className= {`search-delete-container ${input ? 'open' : ''}`}>
+            <div className={`search-delete-container ${input ? 'open' : ''}`}>
                 <input 
-                type="text" 
-                value={input}
-                onChange={(e) => handleInputChange(e)}
-                className="search-input" 
-                placeholder="Search for products..." 
+                    type="text" 
+                    value={input}
+                    onChange={(e) => handleInputChange(e)}
+                    className="search-input" 
+                    placeholder="Search for products..." 
+                    autoFocus // Automatically focus when search opens
                 />
-                <button onClick={handleClearInput}><i className="fa-solid fa-x"></i></button>
+                <button onClick={handleClearInput}>
+                    <i className="fa-solid fa-x"></i>
+                </button>
             </div>
-
 
             {input && (
                 <div className="search-results">
                     {filteredProducts.length > 0 ? (
-                        filteredProducts.map((product, index) => (
-                            <>
-
+                        filteredProducts.map((product) => ( // Removed index parameter since we're not using it properly
                             <div 
-                            className="filtered-product-general-div" 
-                            onClick={() => handleSearchedItemDetails(product)}
-                            style={{ cursor: 'pointer'}}
+                                key={product.id} // Use product.id as key instead of index
+                                className="filtered-product-general-div" 
+                                onClick={() => handleSearchedItemDetails(product)}
+                                style={{ cursor: 'pointer'}}
                             >
                                 <div className="filtered-image">
                                     <img src={product.image} alt={product.name} />
                                 </div>
                                 <div className="filtered-image-details">
                                     <h4 className="product-name">{product.name}</h4>
-                                    <p key={index} className="product-decription ">{product.description}</p>
+                                    <p className="product-description">{product.description}</p>
                                 </div>
                             </div>
-                            </>
-
                         ))
-                    ): (
+                    ) : (
                         <p>No product found</p>
                     )}
                 </div>
             )}
-
         </div>
     )
 }
