@@ -1,0 +1,111 @@
+import adidas from "../TrendingImages/adidas-slide.webp";
+import crossBody from "../TrendingImages/cross-body-bag.webp";
+import diamondEarring from "../Images/Diamond-earrings.webp";
+import womenWhiteTee from "../Images/women-white-shirt.webp";
+import oxfordShirt from "../TrendingImages/oxford-shirt.webp";
+import waistedPants from "../TrendingImages/waited-pants.webp";
+
+export const TrendingProducts = [
+  {
+    id: 1,
+    name: "Latest Adidas Shoes - Clean",
+    type: "Men",
+    price: 50,
+    originalPrice: 170,
+    category: "men",
+    categoryDisplay: "MEN'S CLOTHING",
+    image: adidas,
+    rating: 4,
+    reviews: 5,
+    stock: 23,
+    description:
+      "High-quality Adidas shoes, perfect for casual and semi-formal occasions.",
+    sizes: ["40", "41", "42", "43", "44"],
+    colors: ["Black", "White", "Gray"],
+  },
+  {
+    id: 2,
+    name: "Cross Body Bag",
+    type: "Women",
+    price: 200,
+    originalPrice: 210,
+    category: "women",
+    categoryDisplay: "WOMEN'S ACCESSORIES",
+    image: crossBody,
+    rating: 5,
+    reviews: 5,
+    stock: 23,
+    description:
+      "Stylish cross body bag, ideal for everyday use and versatile outfits.",
+    sizes: ["One Size"],
+    colors: ["Black", "Brown", "Beige"],
+  },
+  {
+    id: 3,
+    name: "Diamond Earrings",
+    type: "Women",
+    price: 350,
+    originalPrice: 500,
+    category: "women",
+    categoryDisplay: "WOMEN'S JEWELRY",
+    image: diamondEarring,
+    rating: 5,
+    reviews: 8,
+    stock: 12,
+    description:
+      "Elegant diamond earrings that add sophistication to any outfit.",
+    sizes: ["One Size"],
+    colors: ["Silver", "Gold"],
+  },
+  {
+    id: 4,
+    name: "Women's White Tee",
+    type: "Women",
+    price: 25,
+    originalPrice: 40,
+    category: "women",
+    categoryDisplay: "WOMEN'S CLOTHING",
+    image: womenWhiteTee,
+    rating: 4,
+    reviews: 10,
+    stock: 50,
+    description:
+      "Classic white tee made from premium cotton. A versatile wardrobe essential.",
+    sizes: ["S", "M", "L", "XL"],
+    colors: ["White"],
+  },
+  {
+    id: 5,
+    name: "Oxford Shirt",
+    type: "Men",
+    price: 60,
+    originalPrice: 100,
+    category: "men",
+    categoryDisplay: "MEN'S CLOTHING",
+    image: oxfordShirt,
+    rating: 4,
+    reviews: 7,
+    stock: 30,
+    description:
+      "Classic men's oxford shirt, suitable for business, casual, and formal wear.",
+    sizes: ["M", "L", "XL", "XXL"],
+    colors: ["Blue", "White", "Gray"],
+  },
+  {
+    id: 6,
+    name: "High-Waisted Pants",
+    type: "Women",
+    price: 45,
+    originalPrice: 90,
+    category: "women",
+    categoryDisplay: "WOMEN'S CLOTHING",
+    image: waistedPants,
+    rating: 4,
+    reviews: 6,
+    stock: 28,
+    description:
+      "Trendy high-waisted pants designed for comfort and style.",
+    sizes: ["S", "M", "L", "XL"],
+    colors: ["Black", "Beige", "Navy"],
+  },
+];

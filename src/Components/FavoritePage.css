@@ -55,7 +55,6 @@ td {
     vertical-align: middle;
 }
 
-/* First Column (Product Info) */
 .first-column {
     display: flex;
     align-items: center;

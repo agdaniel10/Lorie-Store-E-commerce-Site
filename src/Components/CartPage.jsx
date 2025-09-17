@@ -33,7 +33,7 @@ function CartPage() {
 
                 <div className="shopping-cart-title">
                     <img src={bag} alt="this is a bag" /> 
-                    <p>Agada Shopping Cart</p>
+                    <p>Your Shopping Cart</p>
                 </div>
 
                 <div className="cart-main-container">
