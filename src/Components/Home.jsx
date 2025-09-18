@@ -100,7 +100,7 @@ function Home() {
                             <div className="popular-single-items">
                                 <img src={caps} alt="Caps" />
                                 <div className="category-info">
-                                    <div class="category-name">Jewelries</div>
+                                    <div class="category-name">Caps</div>
                                     <div class="category-count">(2) items Available</div>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@ function Home() {
                             <div className="popular-single-items">
                                 <img src={jackets} alt="jackets" />
                                 <div className="category-info">
-                                    <div class="category-name">Jewelries</div>
+                                    <div class="category-name">Jackets</div>
                                     <div class="category-count">(5) items Available</div>
                                 </div>
                             </div>
@@ -116,7 +116,7 @@ function Home() {
                             <div className="popular-single-items">
                                 <img src={shoes} alt="shoes image" />
                                 <div className="category-info">
-                                    <div class="category-name">Jewelries</div>
+                                    <div class="category-name">Shoes</div>
                                     <div class="category-count">(6) items Available</div>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@ function Home() {
                             <div className="popular-single-items">
                                 <img src={bags} alt="bags" />
                                 <div className="category-info">
-                                    <div class="category-name">Jewelries</div>
+                                    <div class="category-name">Bags</div>
                                     <div class="category-count">(1) items Available</div>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@ function Home() {
                             <div className="popular-single-items">
                                 <img src={suitesSec} alt="" />
                                 <div className="category-info">
-                                    <div class="category-name">Jewelries</div>
+                                    <div class="category-name">Suites</div>
                                     <div class="category-count">(6) items Available</div>
                                 </div>
                             </div>
