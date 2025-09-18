@@ -430,18 +430,13 @@ Header {
 }
 
 .mobile-login-btn:hover {
-  /* background: #6366f1; */
   color: white;
 }
 
 .mobile-signup-btn {
-  /* background: #6366f1; */
   color: white;
 }
 
-.mobile-signup-btn:hover {
-  /* background: #5855eb; */
-}
 
 /* Existing auth button styles updates */
 .auth-buttons {
