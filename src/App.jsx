@@ -16,6 +16,8 @@ import './App.css';
 import ProductDetails1 from './Components/ProductDetails1';
 import BlogCardPage from './Components/BlogCardPage';
 import Search from './Components/Search';
+import SignInPage from './Components/pages/SignIn';
+import SignUpPage from './Components/pages/SignUp';
 
 function App() {
   const [showSearch, setShowSearch] = useState(false)
@@ -45,6 +47,8 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/trending" element={<Trending />} />
+              <Route path="/sign-in" element={<SignInPage />} />
+              <Route path="/sign-up" element={<SignUpPage />} />
               <Route path="*" element={<div>404 Not Found</div>} />
             </Routes>
           </main>

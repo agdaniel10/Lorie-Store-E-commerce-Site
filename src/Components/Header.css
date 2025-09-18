@@ -31,12 +31,10 @@ Header {
     background-color: transparent;
 }
 
-
 .Header_container > * {
-  flex: 1 1 auto;   /* allow grow & shrink */
-  min-width: 0;     /* prevent overflow */
+  flex: 1 1 auto;  
+  min-width: 0;   
 }
-
 
 /* Image and Heading Div */
 .img-title-container {
@@ -53,7 +51,6 @@ Header {
 }
 
 .img-title-container h3 {
-    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
     font-family: 'Prata', sans-serif;
     font-size: clamp(1rem, 3vw, 1.5rem);
     margin: 0;
@@ -112,24 +109,24 @@ Header {
 }
 
 .list-icons ul li:hover {
-    transform: scale(1.2);
+    transform: scale(1.02);
 }
 
+/* Generic button styling - removed conflicts */
 .list-icons ul button {
-    border: none;
     border-radius: 8px;
-    background-color: white;
     border: 1px solid #edece8;
+    background-color: white;
     font-family: 'Nunito', sans-serif;
     font-size: 1rem;
     font-weight: 505;
-    padding: 8px 8px;
+    padding: 8px 12px;
     transition: transform 0.2s ease;
     cursor: pointer;
 }
 
 .list-icons ul button:hover{
-    transform: scale(1.1);
+    transform: scale(1.01);
 }
 
 .fave-container, .cart-container {
@@ -230,9 +227,283 @@ Header {
 }
 
 .hamburger-items ul li a:hover {
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
     background-color: black;
     color: white;
+}
+
+/* Auth buttons styling - Fixed conflicts */
+.auth-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.auth-buttons a {
+  text-decoration: none;
+}
+/* Profile Container Styles */
+.profile-container {
+  position: relative;
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.profile-avatar:hover {
+  opacity: 0.8;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+}
+
+/* Dropdown Styles */
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 240px;
+  z-index: 1000;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.dropdown-header {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-email {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.dropdown-menu {
+  padding: 8px 0;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #374151;
+  transition: background-color 0.2s ease;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+.dropdown-item i {
+  width: 16px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.dropdown-footer {
+  padding: 12px 16px;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.dropdown-footer small {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Mobile Auth Styles */
+.mobile-user {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.mobile-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.mobile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-manage-btn,
+.mobile-signout-btn,
+.mobile-login-btn,
+.mobile-signup-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.mobile-manage-btn {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.mobile-manage-btn:hover {
+  background: #e5e7eb;
+}
+
+.mobile-signout-btn {
+  background: #fee2e2;
+  /* color: #dc2626; */
+}
+
+.mobile-signout-btn:hover {
+  background: #fecaca;
+}
+
+.mobile-login-btn {
+  background: transparent;
+  color: #6366f1;
+  border: 1px solid #6366f1;
+}
+
+.mobile-login-btn:hover {
+  /* background: #6366f1; */
+  color: white;
+}
+
+.mobile-signup-btn {
+  /* background: #6366f1; */
+  color: white;
+}
+
+.mobile-signup-btn:hover {
+  /* background: #5855eb; */
+}
+
+/* Existing auth button styles updates */
+.auth-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.login-btn,
+.signup-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.login-btn {
+  background: transparent;
+  color: black;
+  border: 1px solid #6366f1;
+}
+
+.login-btn:hover {
+  background: black;
+  color: white;
+}
+
+.signup-btn {
+  background: white;
+  color: black;
+}
+
+.signup-btn:hover {
+  background: black;
+  color:  white;
+}
+
+.mobile-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.mobile-user span {
+  color: black;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 350px){
+    .login-btn,
+    .signup-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    }
 }
 
 @media (max-width: 600px) {
